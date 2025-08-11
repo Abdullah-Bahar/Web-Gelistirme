@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<!-- 
+		* <form> etiketi, form oluşturmak için kullanılır.
+		* Formlar, kullanıcıdan veri toplamak için kullanılır.
+		* Formun içindeki elemanlar, kullanıcıdan veri almak için kullanılır.
+		* Formun gönderilmesi için bir "submit" butonu eklenir.
+
+		* input etiketleri, form elemanlarını tanımlar.
+			- "type" attribute'u, input elemanının türünü belirtir (text, password, email, vs.).
+			- "name" attribute'u, input elemanının adını belirtir.
+			- "value" attribute'u, input elemanının varsayılan değerini belirtir.
+			- "placeholder" attribute'u, input elemanının içine yazılacak örnek metni belirtir.
+			- "required" attribute'u, input elemanının doldurulmasının zorunlu olduğunu belirtir.
+			- .... ve daha pek çok attribute vardır.
+	-->
+	<form action="/Home/Register">
+		<!-- action : Form'un gönderileceği yeri ifade eder. -->
+		<p>
+			Ad : <input type="text">
+		</p>
+
+		<p>
+			Soyad : <input type="text">
+		</p>
+
+		<p>
+			Mail : <input type="email" placeholder="example@email.com" required>
+		</p>
+
+		<p>
+			Beni hatırla <input type="checkbox">
+		</p>
+
+		<p>
+			<!-- name : input'ları gruplandırır. -->
+			Erkek <input type="radio" name="cinsiyet">
+			Kadın <input type="radio" name="cinsiyet">
+		</p>
+
+		<p>
+			Hobiler :
+			<br>
+			Sinema <input type="checkbox">
+			Kitap <input type="checkbox">
+			Spor <input type="checkbox">
+		</p>
+
+		<p>
+			<select>
+				<option>İstanbul</option>
+				<option>Ankara</option>
+				<option>İzmir</option>
+			</select>
+		</p>
+
+		<p>
+			<select multiple>
+				<option>İstanbul</option>
+				<option>Ankara</option>
+				<option>İzmir</option>
+			</select>
+		</p>
+
+		<!-- Bilgileri kaydetmek için kullanılan buton -->
+		<input type="submit" value="Kaydet">
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<!-- 
+		* <ul> etiketi, sırasız liste oluşturur.
+		* <li> etiketi, liste öğelerini tanımlar.
+		* <ul> içinde <li> etiketleri kullanılarak liste öğeleri oluşturulur.
+	
+		* <ul> etiketinin içine başka <ul> etiketleri de eklenebilir.
+		* Bu, iç içe sırasız listeler oluşturmak için kullanılır.
+	-->
+	<ul>
+		<li>
+			Lorem, ipsum dolor.
+			<!-- Alt Liste -->
+			<ul>
+				<li>
+					Alt eleman
+					<!-- Alt Liste -->
+					<ul>
+						<li>Alt alt eleman</li>
+						<li>Alt alt eleman</li>
+					</ul>
+				</li>
+				
+				<li>Alt eleman</li>
+			</ul>
+		</li>
+		
+		<li>Lorem, ipsum.</li>
+		
+		<li>Lorem ipsum dolor sit.</li>
+	</ul>
+
+	<!-- 
+		* ul etiketi için bazı attribute ile sırasız liste özelleiklerini değiştirebiliriz  
+	 		- "type" : Liste öğelerinin işaretleme türünü belirler.
+	-->
+	<ul type="square">
+		<li>Lorem, ipsum.</li>
+		<li>Natus, voluptas?</li>
+		<li>Magni, distinctio.</li>
+	</ul>
+
+
+</body>
+
+</html>

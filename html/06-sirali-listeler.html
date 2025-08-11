@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<!-- 
+		* <ol> etiketi, sıralı liste oluşturur.
+		* <li> etiketi, liste öğelerini tanımlar.
+		* <ol> içinde <li> etiketleri kullanılarak liste öğeleri oluşturulur.
+	
+		* <ol> etiketinin içine başka <ul> etiketleri de eklenebilir.
+		* Bu, iç içe sıralı listeler oluşturmak için kullanılır.
+	-->
+	<ol>
+		<li>
+			Lorem, ipsum dolor.
+			<!-- Alt Liste -->
+			<ol>
+				<li>
+					Alt eleman
+					<!-- Alt Liste -->
+					<ol>
+						<li>Alt alt eleman</li>
+						<li>Alt alt eleman</li>
+					</ol>
+				</li>
+				
+				<li>Alt eleman</li>
+			</ol>
+		</li>
+		
+		<li>Lorem, ipsum.</li>
+		
+		<li>Lorem ipsum dolor sit.</li>
+	</ol>
+
+	<!-- 
+		* ol etiketi için bazı attribute ile sıralama özelleiklerini değiştirebiliriz  
+	 		- "start" : BAşlangıç numarasını belirler.
+			- "type" : Liste öğelerinin numaralandırma türünü belir
+			- "reversed" : Liste öğelerinin ters sırada görüntülenmesini sağlar.
+	-->
+	<ol start="5" type="a">
+		<li>Lorem ipsum dolor sit amet.
+			<ol start="3" type="i" reversed>
+				<li>Lorem, ipsum.</li>
+				<li>Blanditiis, qui.</li>
+				<li>Optio, magnam?</li>
+			</ol>
+		</li>
+		<li>Eveniet veritatis tempora est quam.</li>
+		<li>Provident maxime quod ducimus esse.</li>
+		<li>Illum laudantium eligendi reiciendis iusto!</li>
+		<li>Mollitia quasi dicta quaerat sed.</li>
+	</ol>
+
+
+</body>
+
+</html>
