@@ -1,0 +1,32 @@
+/* .container {
+	width: 1140px;
+} */
+
+.blog-post-container {
+	width: 75%;
+	float: left;
+}
+
+.other-posts {
+	width: 25%;
+	float: right;
+}
+
+.auther-box img {
+	margin-top: 10px;
+}
+
+.tags {
+	margin: 0;
+	padding: 0;
+}
+
+.tags li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.tags li a {
+	text-decoration: none;
+}

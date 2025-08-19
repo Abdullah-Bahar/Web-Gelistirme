@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inheritance</title>
+
+	<style>
+		body {
+    		/* 
+			=================================
+    			Üst elementin renk özelliği
+			=================================
+    			- body etiketi tüm alt elementlere varsayılan renk verir.
+    			- Ancak bazı elementler (örn. <a>) varsayılan olarak üstten renk mirası almaz.
+    		*/
+			color: brown;
+		}
+
+		
+		a {
+			/* 
+			=================================
+       			Mirasa izin verme
+			=================================
+	       		- <a> etiketi normalde üstünden renk almaz.
+       			- inherit kullanarak <body>'nin rengini miras almasını sağlıyoruz.
+			*/
+			color: inherit;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Inheritance</h1>
+
+	<ul>
+		<li>Lorem.</li>
+		<li>Quibusdam!</li>
+		<li>Ullam!</li>
+		<li>
+			<a href="">Tempore</a> <!-- Inherit sayesinde brown rengini alır -->
+		</li>
+	</ul>
+
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, tenetur!</p>
+	<p>Culpa est nesciunt animi, quibusdam consectetur enim blanditiis fugiat facilis!</p>
+	<p>Eveniet, suscipit! Doloribus vel eligendi, esse temporibus beatae error vitae.</p>
+
+</body>
+
+</html>

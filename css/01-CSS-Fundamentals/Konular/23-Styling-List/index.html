@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stylin List</title>
+
+	<style>
+		ul {
+			padding: 0;
+			list-style-type: none;
+			border: 1px solid #ddd;
+		}
+
+		ul li {
+			border: 1px solid #ddd;
+			padding: 7px 12px;
+		}
+
+		ul li:last-child {
+			border-bottom: none;
+		}
+
+		ol {
+			background-color: gray;
+			list-style-type: none;
+			padding: 10px 20px;
+			border-left: 5px solid red;
+		}
+
+		
+		/* Her <li> için sayacı artır, başına sayı+ ekle ve stil ver */
+		ol li {
+			position: relative;
+			counter-increment: list-counter;
+		}
+		ol li::before {
+			content: counter(list-counter) "+";
+			position: absolute;
+			left: -15px;
+			color: rgb(0, 255, 213);
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<ol>
+		<li>Web Developer</li>
+		<li>ASP.Net</li>
+		<li>Felsefe </li>
+	</ol>
+
+	<ul>
+		<li>Web Developer</li>
+		<li>ASP.Net</li>
+		<li>Felsefe </li>
+	</ul>
+
+</body>
+
+</html>
