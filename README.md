@@ -1,4 +1,34 @@
-# Web Geliştirme
+# :rocket: Web Geliştirme Kaynak Deposu
+
+## :bulb: Proje Hakkında
+
+Bu repo, **web geliştirme** öğrenmek isteyenler için hazırlanmış bir kaynak niteliğindedir. 
+
+Her konu, klasördeki ilgili dosyalar içinde yer alan **yorum satırları** aracılığıyla açıklanmıştır.
+
+Projeyi oluştururken **Sadık Turan hocamızın eğitimlerinden ilham aldım**. Daha derinlemesine bilgi edinmek isteyenler, hocamızın derslerine göz atabilirler.
+
+<br>
+
+
+## :computer: Canlı Önizleme
+
+Buradaki tüm içeriği doğrudan tarayıcı üzerinden görüntülemek için :
+
+- [**Canlı Önizleme İçin Tıklayın**](https://abdullah-bahar.github.io/Web-Gelistirme/)
+
+<br>
+
+
+## :handshake: Katılım ve Katkıda Bulunma
+
+Amacım bu projeyi zamanla **daha faydalı, açık ve öğretici** bir kaynak haline getirmektir. 
+
+İçeriklerde bir eksik veya yanlışlık olduğunu düşünüyorsanız, **fork** alarak önerilerinizi ve katkılarınızı sunabilirsiniz.
+
+<br>
+
+## :book: İçindekiler
 
 1.  [HTML](#html-konu-i̇çeriği)
 1.  [CSS](#css)
@@ -9,13 +39,14 @@
 	* [CSS Uygulama](#css-uygulama)
 
 <br>
+
 <!-- 
 ==========================
 	HTML 
 ==========================
 -->
 
-# HTML
+# :pencil: HTML
 
 ### Konular
 
@@ -53,7 +84,7 @@
 ==========================
 -->
 
-# CSS
+# :art: CSS
 
 <!-- CSS Temelleri -->
 ## CSS Temelleri
@@ -122,8 +153,8 @@
 <!-- CSS Responsive -->
 ## CSS Responsive
 
-1. [Media Query](css/02-CSS-Responsive-Design/01-Media-Query/) 
-1. [Image Gallery](css/02-CSS-Responsive-Design/02-Image-Gallery/) 
+1. [Media Query](css/02-CSS-Responsive-Design/01-Media-Query/) - `@media` Ekran boyutuna göre stil değiştirme
+1. [Image Gallery](css/02-CSS-Responsive-Design/02-Image-Gallery/) - Responsive resim galerisi oluşturma
 1. [Responsive Uygulama](css/02-CSS-Responsive-Design/03-Responsive-Uygulama/) 
 
 <br>
