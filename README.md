@@ -1,10 +1,11 @@
 # Web Geliştirme
 
-*  [HTML](#html-konu-i̇çeriği)
-*  [CSS](#css)
-	* [CSS Fundamentals](#css-fundamentals)
+1.  [HTML](#html-konu-i̇çeriği)
+1.  [CSS](#css)
+	* [CSS Temelleri](#css-fundamentals)
 		* [Konular](#konular-1)
 		* [Uygulama](#uygulama)
+	* [CSS Responsive](#css-responsive)
 
 <br>
 <!-- 
@@ -53,6 +54,7 @@
 
 # CSS
 
+<!-- CSS Temelleri -->
 ## CSS Fundamentals
 
 ### Konular
@@ -113,3 +115,12 @@
 * [Uygulama Styling Form](css/01-CSS-Fundamentals/Uygulamalar/13-Uygulama-Styling-Form/)
 * [Uygulama Tooltip](css/01-CSS-Fundamentals/Uygulamalar/14-Uygulama-Tooltip/)
 * [Uygulama Dropdown](css/01-CSS-Fundamentals/Uygulamalar/15-Uygulama-Dropdown/)
+
+<br>
+<!-- CSS Responsive -->
+
+## CSS Responsive
+
+1. [Media Query](css/02-CSS-Responsive-Design/01-Media-Query/) 
+1. [Image Gallery](css/02-CSS-Responsive-Design/02-Image-Gallery/) 
+1. [Responsive Uygulama](css/02-CSS-Responsive-Design/03-Responsive-Uygulama/) 
