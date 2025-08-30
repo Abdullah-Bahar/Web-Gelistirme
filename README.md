@@ -160,7 +160,7 @@ Amacım bu projeyi zamanla **daha faydalı, açık ve öğretici** bir kaynak ha
 <br>
 
 <!-- CSS Uygulama -->
-## CSS Uygulama
+## CSS Genel Uygulama
 
 1. [Freelancer Web Tasarım Uygulaması](css/03-Freelancer-Web-Tasarim-Uygulamasi/)
 	- Görüntülemek için [tıklayınız](https://abdullah-bahar.github.io/Web-Gelistirme/css/03-Freelancer-Web-Tasarim-Uygulamasi/)
