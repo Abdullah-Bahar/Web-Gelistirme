@@ -109,7 +109,7 @@
 	1. [Styling Links & Link](css/01-CSS-Fundamentals/Uygulamalar/07-Uygulama-Styling-List-Link/)
 	1. [Transition](css/01-CSS-Fundamentals/Uygulamalar/08-Uygulama-Transition/)
 	1. [Navbar](css/01-CSS-Fundamentals/Uygulamalar/09-Uygulama-Navbar/)
-	1. [Images](css/01-CSS-Fundamentals/Uygulamalar/10-Floating-Images/)
+* [Floating Images](css/01-CSS-Fundamentals/Uygulamalar/10-Floating-Images/)
 * [Uygulama Product Card](css/01-CSS-Fundamentals/Uygulamalar/11-Uygulama-Product-Card/)
 * [Uygulama Images Gallery](css/01-CSS-Fundamentals/Uygulamalar/12-Uygulama-Image-Gallery/)
 * [Uygulama Styling Form](css/01-CSS-Fundamentals/Uygulamalar/13-Uygulama-Styling-Form/)
