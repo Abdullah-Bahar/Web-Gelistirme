@@ -15,7 +15,7 @@ Projeyi oluştururken **Sadık Turan hocamızın eğitimlerinden ilham aldım**.
 
 Buradaki tüm içeriği doğrudan tarayıcı üzerinden görüntülemek için :
 
-- [**Canlı Önizleme İçin Tıklayın**](https://abdullah-bahar.github.io/Web-Gelistirme/)
+- <a href="https://abdullah-bahar.github.io/Web-Gelistirme/" target="_blank">**Canlı Önizleme İçin Tıklayın**</a>
 
 <br>
 
