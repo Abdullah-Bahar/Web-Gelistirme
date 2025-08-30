@@ -131,5 +131,5 @@
 <!-- CSS Uygulama -->
 ## CSS Uygulama
 
-1. [Freelancer Web Tasarım Uygulaması](css/03-Freelancer-Web-Tasarım-Uygulaması/)
+1. [Freelancer Web Tasarım Uygulaması](css/03-Freelancer-Web-Tasarim-Uygulamasi/)
 	- Görüntülemek için [tıklayınız](https://abdullah-bahar.github.io/Web-Gelistirme/css/03-Freelancer-Web-Tasarim-Uygulamasi/)
