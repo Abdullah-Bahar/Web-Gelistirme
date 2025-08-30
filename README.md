@@ -6,6 +6,7 @@
 		* [Konular](#konular-1)
 		* [Uygulama](#uygulama)
 	* [CSS Responsive](#css-responsive)
+	* [CSS Uygulama](#css-uygulama)
 
 <br>
 <!-- 
@@ -55,7 +56,7 @@
 # CSS
 
 <!-- CSS Temelleri -->
-## CSS Fundamentals
+## CSS Temelleri
 
 ### Konular
 
@@ -117,10 +118,18 @@
 * [Uygulama Dropdown](css/01-CSS-Fundamentals/Uygulamalar/15-Uygulama-Dropdown/)
 
 <br>
-<!-- CSS Responsive -->
 
+<!-- CSS Responsive -->
 ## CSS Responsive
 
 1. [Media Query](css/02-CSS-Responsive-Design/01-Media-Query/) 
 1. [Image Gallery](css/02-CSS-Responsive-Design/02-Image-Gallery/) 
 1. [Responsive Uygulama](css/02-CSS-Responsive-Design/03-Responsive-Uygulama/) 
+
+<br>
+
+<!-- CSS Uygulama -->
+## CSS Uygulama
+
+1. [Freelancer Web Tasarım Uygulaması](css/03-Freelancer-Web-Tasarım-Uygulaması/)
+	- Görüntülemek için [tıklayınız](https://abdullah-bahar.github.io/Web-Gelistirme/css/03-Freelancer-Web-Tasarim-Uygulamasi/)
