@@ -1,4 +1,4 @@
-# :rocket: Web Geliştirme Kaynak Deposu
+# :rocket: Web Geliştirme Notları & Projeleri
 
 ## :bulb: Proje Hakkında
 
