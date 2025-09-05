@@ -1,5 +1,6 @@
 # :rocket: Web Geliştirme Notları & Projeleri
 
+<!-- Proje Hakkında -->
 ## :bulb: Proje Hakkında
 
 Bu repo, **web geliştirme** öğrenmek isteyenler için hazırlanmış bir kaynak niteliğindedir. 
@@ -8,36 +9,32 @@ Her konu, klasördeki ilgili dosyalar içinde yer alan **yorum satırları** ara
 
 Projeyi oluştururken **Sadık Turan hocamızın eğitimlerinden ilham aldım**. Daha derinlemesine bilgi edinmek isteyenler, hocamızın derslerine göz atabilirler.
 
-<br>
-
-
+<!-- Canlı Önizleme -->
 ## :computer: Canlı Önizleme
 
 Buradaki tüm içeriği doğrudan tarayıcı üzerinden görüntülemek için :
 
 - <a href="https://abdullah-bahar.github.io/Web-Gelistirme/" target="_blank">**Canlı Önizleme İçin Tıklayın**</a>
 
-<br>
-
-
+<!-- Katılım ve Katkıda Bulunma -->
 ## :handshake: Katılım ve Katkıda Bulunma
 
 Amacım bu projeyi zamanla **daha faydalı, açık ve öğretici** bir kaynak haline getirmektir. 
 
 İçeriklerde bir eksik veya yanlışlık olduğunu düşünüyorsanız, **fork** alarak önerilerinizi ve katkılarınızı sunabilirsiniz.
 
-<br>
-
+<!-- İçindekiler -->
 ## :book: İçindekiler
 
-1.  [HTML](#html-konu-i̇çeriği)
-1.  [CSS](#css)
-	* [CSS Temelleri](#css-fundamentals)
+1.  [HTML](#pencil-html)
+1.  [CSS](#art-css)
+	* [CSS Temelleri](#css-temelleri)
 		* [Konular](#konular-1)
 		* [Uygulama](#uygulama)
 	* [CSS Responsive](#css-responsive)
-	* [CSS Uygulama](#css-uygulama)
+	* [CSS Uygulama](#css-genel-uygulama)
 	* [Flexbox](#flexbox)
+	* [Grid](#grid)
 
 <br>
 
@@ -170,7 +167,7 @@ Amacım bu projeyi zamanla **daha faydalı, açık ve öğretici** bir kaynak ha
 ## Flexbox
 
 1. [Flexbox Container & Aligments](css/04-Flexbox/01-Flexbox-Container-Aligments/)
-	- `flexbox`, `flex container`, `flex item`, 
+	- `flexbox`, `flex container`, `flex item`
 	- `display: flex`, `flex-direction`, `flex-wrap`, `justify-content`, `align-items`
 	- `Main Axis`, `Cross Axis`
 1. [Flex Items](css/04-Flexbox/02-Flex-Items/)
@@ -186,3 +183,27 @@ Amacım bu projeyi zamanla **daha faydalı, açık ve öğretici** bir kaynak ha
 	- [Ben](css/04-Flexbox/06-Media-Object/Ben/)
 	- [Hoca](css/04-Flexbox/06-Media-Object/Hoca/)
 1. [Flex Layout](css/04-Flexbox/07-Flex-Layout/) - Tipik bir web sayfası düzenini (header, navbar, menu, sidebar, footer) Flexbox  ile oluşturma uygulaması
+
+<!-- CSS Gird -->
+## Grid
+
+1. [Grid Container & Item](css/05-Grid/01-Grid-Container-Item/)
+	- Grid Kavramalrı 
+		- `grid nedir ?`, `grid container`, `grid item`, `grid` vs `flex`
+	- Grid Container
+		- `display: grid`, `grid-template-columns`, `grid-template-rows`, `repeat()`, `fr`, `grid-auto-rows`, `grid-auto-cols`
+		- `gap`, `column-gap`, `row-gap`
+	- Grid Item
+		-  `grid-column-start`, `grid-column-end`, `grid-row-start`, `grid-row-end`, `grid-column`, `grid-row`, `grid-area`, `span`
+1. [Grid Layout](css/05-Grid/02-Grid-Layout/)
+	- `grid-template-areas`, `grid-area`
+1. [Grid Responsive](css/05-Grid/03-Grid-Responsive/) - Responsive'e duyarlı grid uygulaması
+1. [Grid Dinamik Column](css/05-Grid/04-Grid-Dinamik-Column/) 
+	- `minmax()`, `repeat()`, `auto-fill`, `auto-fit`
+1. [Grid Hiazalama](css/05-Grid/05-Grid-Hizalama/)
+	- `justify-item`, `align-item`
+	- `justify-content`, `align-content` 
+	- `justify-self`, `align-self`
+1. [Grid Uygulama]() 
+	- *Frontend Mentor:* **Testimonials Grid Section Challenge**
+	- Canlı Önizleme için [tıklayınız](https://abdullah-bahar.github.io/Testimonials-Grid-Section/).
