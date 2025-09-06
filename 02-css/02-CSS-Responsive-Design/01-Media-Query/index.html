@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Media Query</title>
+
+	<style>
+
+		* {
+			box-sizing: border-box;
+		}
+
+		h1 {
+			font-size: 30px;
+		}
+
+		.box {
+			width: 25%;	/* yan yana 4 kutu */
+			height: 250px;
+			background: yellow;
+			float: left;
+			border: 1px solid blue;			
+		}
+
+		/* Tablet Görünümü (max 700px) - 700 çözünürlüğe kadar aşağıdaki geçerli olcak */
+		@media screen and (max-width: 700px) {
+			h1 {
+				font-size: 20px;
+			}
+
+			.box {
+				width: 50%;	/* yan yana 2 kutu */
+			}
+		}
+
+		 /* Telefon Görünümü (max 400px) - 400 çözünürlüğe kadar aşağıdaki geçerli olcak*/
+		@media screen and (max-width: 400px)  {
+			h1 {
+				font-size: 14px;
+			}
+
+			.box {
+				width: 100%; /* her satırda tek kutu */
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>Hey Dostum Responsive Hoş Geldin</h1>
+
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+
+</body>
+
+</html>

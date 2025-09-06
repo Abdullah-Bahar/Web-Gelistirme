@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Backgroun Image</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: "Open Sans", sans-serif;
+		}
+
+		.header {
+			/* 
+				- vh = viewport height  
+				- Tarayıcının görünür ekranın yüksekliğinin %90
+			*/
+			height: 95vh;
+			background: red;
+			
+			/* Arka plan resmini ayarlama */
+			background-image: 
+				/* HTML Color Picker - Renk Geçişlerini sağlamak için kullanılır-yor*/
+				linear-gradient(to left bottom, /* Renk geçişinin yönünü belirtiyor */ 
+								rgba(102, 255, 102, .5), 
+								rgba(230, 255, 230, .5)),
+				url(img/1.jpg);
+			background-size: cover;   /* Resmi Sığdırır */
+			background-position: top; /* top | lef | right | bottom | center*/
+
+			/* Resmi Kırpma */
+			clip-path: polygon(0 0,			/* 1. Nokta */ 
+								100% 0, 	/* 2. Nokta */
+								100% 100%, 	/* 3. Nokta */
+								0 85%);		/* 4. Nokta */
+
+			position: relative;
+		}
+
+
+		.heading {
+			text-transform: uppercase;
+			color: #fff;
+			position: absolute;
+			
+			/* Yazı ortadan yazılmaya başladı. Ortalanmadı */
+			top: 40%;
+			left: 50%;
+			text-align: center;
+
+			/* Yazıyı ortalamak*/
+			transform: translate(-50%, /* Nesnenin genişliğinin yarısı kadar sağa kayar (eksi değer verdiğimiz için sola kaydı) */
+								-50%); /* Nesnenin yüksekliğinin yarısı kadar aşağı kayar (eksi değer verdiğimiz için yukarı kaydı) */
+		}
+
+		.heading-main {
+			display: block;
+			font-size: 50px;
+			letter-spacing: 10px;
+		}
+
+		.heading-sub {
+			display: block;
+			font-size: 30px;
+			letter-spacing: 5px;
+		}
+
+		.logo-box {
+			position: absolute;
+			top: 40px;
+			left: 40px;
+		}
+
+		.logo {
+			height: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<header class="header">
+	
+		<div class="logo-box">
+			<img class="logo" src="img/logo.png" alt="">
+		</div>
+
+		<h1 class="heading">
+			<span class="heading-main">Main Title</span>
+			<span class="heading-sub">Sub Title</span>
+		</h1>
+	</header>
+
+</body>
+
+</html>

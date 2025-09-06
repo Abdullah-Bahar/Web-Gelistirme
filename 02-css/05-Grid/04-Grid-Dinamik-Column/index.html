@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid Esnek Sütunlar</title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: grid;
+
+			/* 
+				minmax(min değer, max değer)
+					- ekrandaki boşluğa göre bu iki değer arasında değişen değerlere sahip olur
+			*/
+			grid-template-columns: minmax(200px, 400px) 1fr 1fr;
+			grid-template-columns: repeat(3, minmax(200px, 1fr));
+			
+			/* 
+				auto-fill
+					- Mümkün olduğu müddetçe çok satır sığdırmaya çalışır 
+					- boş alan 200px olana kadar diğer hücrelerle doldurur.
+					- 200px'li geçtiğinde bir sonraki gelecek olan hücre için yer açar (Gelecek eleman olsun ya da olmasın)
+			*/
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+			/* 
+				auto-fit
+					- 200px'li geçtiğinde bir sonraki gelecek olan hücre için yer açar
+					- Eğer gelecek eleman varsa o geçer. Yoksa geri kalan elemanlar satırı doldurur.
+			*/
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			
+			gap: 10px;
+			background-color: brown;
+			padding: 20px;
+		}
+
+		.item {
+			background-color: goldenrod;
+			padding: 20px;
+			color: #fff;
+			font-size: 25px;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<!-- grid container  -->
+	<div class="container">
+
+		<!-- Grid items  -->
+		<div class="item">Grid Eleman 1</div>
+		<div class="item">Grid Eleman 2</div>
+		<div class="item">Grid Eleman 3</div>
+	</div>
+
+</body>
+
+</html>

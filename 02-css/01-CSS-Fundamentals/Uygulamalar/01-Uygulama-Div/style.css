@@ -1,0 +1,13 @@
+.container {
+	width: 1140px;
+}
+
+.blog-post-container {
+	width: 75%;
+	background-color: antiquewhite;
+}
+
+.others-container {
+	width: 25%;
+	background-color: aqua;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Floatin Images</title>
+
+	<style>
+		/* 	img  etiketi inline bir elementtir. 
+			Burada ona bir genişlik verdikten sonra float ile sola yaslayıp 
+			metnin yanından akmasını sağladık.
+			float eklediğimiz için de sayfa akıçı değişti. */
+		img {
+			width: 200px;
+			float: left; /* Elemanı sola yaslar ve metnin etrafında akmasını sağlar */
+			margin-right: 10px;
+		}
+		p {
+			border: 1px solid gray;
+			padding: 5px;
+		}
+		/* 	overflow: auto;
+				* Taşan içerik olursa otomatik kaydırma çubuğu ekler.
+				float kullanıldığında, kapsayıcı elementin yüksekliği
+				"çökmemesi" için de bu yöntem kullanılır.
+		   
+		   * Buradaki img etiketine float verdikten sonra img etiketinin kapsayıcısı olan p etiketi 
+		   overflow vermeden önce içerisindeki yazı kadar yer kaplar. Yazı az ise resim taşar ve düzeni bozar.
+		   Bunun önüne geçmek için overflow kullandık */
+		.clear {
+			overflow: auto;
+		}
+	</style>
+</head>
+
+<!-- 
+	INLINE vs BLOCK:
+		- Inline elementler (ör. <span>, <a>, <img>) sadece içerikleri kadar yer kaplar.
+		  Yan yana dizilebilirler ve satır akışını bozmazlar.
+		- Block elementler (ör. <p>, <div>, <h1>) varsayılan olarak satırın tamamını kaplar.
+		  Sonraki içerik alt satıra geçer.
+
+	FLOAT:
+		- float özelliği, bir elemanı sola (left) veya sağa (right) yaslar.
+		- Float verilen eleman belge akışından çıkar, yani kapsayıcı (container) 
+		onun yüksekliğini artık dikkate almaz.
+		- Diğer içerikler bu elemanın etrafında akar (metinler resmin yanında görünür).
+
+	OVERFLOW:
+		- İçerik kapsayıcıdan taşarsa ne yapılacağını belirler.
+		- auto: Gerekirse kaydırma çubuğu ekler.
+		- float kullanılan durumlarda kapsayıcı elementin çökmesini önlemek için de kullanılır.
+-->
+
+<body>
+
+	<!-- Normal block seviye paragraf -->
+	<p>
+		Lorem ipsum dolor sit amet consectetur.
+		Lorem ipsum dolor sit amet consectetur.
+		Lorem ipsum dolor sit amet consectetur.
+		Lorem ipsum dolor sit amet consectetur.
+		Lorem ipsum dolor sit amet consectetur.
+	</p>
+
+	<!-- Resim float ile sola yaslanıyor, metin yanından akıyor -->
+	<p class="clear">
+		<img src="img/galata-kulesi.jpg" alt="">
+		Lorem ipsum, dolor sit amet consectetur adipisicing.
+		Lorem ipsum, dolor sit amet consectetur adipisicing.
+		Lorem ipsum, dolor sit amet consectetur adipisicing.
+	</p>
+
+</body>
+
+</html>

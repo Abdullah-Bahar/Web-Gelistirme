@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox Row Aligments</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			background-color: #f2f2f2;
+			padding: 15px;
+			height: 95vh;
+			max-width: 95vw;
+
+			display: flex;
+			flex-wrap: wrap;
+
+			/* 
+				align-content:
+				- Birden fazla satır varsa her satır cross axis hizalaması (Dikeyde)
+				- flex-wrap: wrap; kullanıldığında etkilidir.
+			*/
+			align-content: flex-start;
+			align-content: flex-end;
+			align-content: stretch;
+			align-content: center;
+			align-content: space-between;
+			align-content: space-around;
+			align-content: space-evenly;
+
+			justify-content: space-between;
+		}
+
+		.item {
+			background-color: chocolate;
+			padding: 20px;
+			margin: 15px;
+			color: #fff;
+			font-size: 24px;
+		}
+
+		.i8 {
+			flex-grow: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 1. Container -->
+	<div class="container">
+		<div class="item">item 1</div>
+		<div class="item">item 2</div>
+		<div class="item">item 3</div>
+		<div class="item">item 4</div>
+		<div class="item">item 5</div>
+		<div class="item">item 6</div>
+		<div class="item">item 7</div>
+		<div class="item">item 4</div>
+		<div class="item">item 5</div>
+		<div class="item">item 6</div>
+		<div class="item">item 7</div>
+		<div class="item i8">item 8</div>
+	</div>
+</body>
+
+</html>

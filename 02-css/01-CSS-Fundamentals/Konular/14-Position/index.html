@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+
+	<!-- 
+	    Position Değerleri:
+
+	    1) static (Varsayılan)
+	        - HTML elementlerinin normal belge akışına göre konumlandırılır.
+	        - top, bottom, left, right değerleri uygulanmaz.
+
+	    2) relative
+	        - Normal akıştaki konumunu korur, ancak top, bottom, left, right ile kaydırılabilir.
+	        - Element hâlâ yer kaplar; diğer elementler normal akışa göre yerleşir.
+
+	    3) absolute
+	        - En yakın position: relative, absolute veya sticky olan üst kapsayıcıya göre konumlanır.
+	        - Normal akıştan çıkar, diğer elementler onun yerine yerleşir.
+	        - top, bottom, left, right değerleri ile yerleşir.
+
+	    4) fixed
+	        - Viewport’a (tarayıcı penceresi) göre konumlanır.
+	        - Scroll yapsan bile yeri sabit kalır.
+	        - Normal akıştan çıkar, diğer elementler onun yerine yerleşir.
+
+	    5) sticky
+	        - Normal akışta relative gibi davranır.
+	        - Scroll ile belirli bir noktaya geldiğinde fixed gibi sabitlenir.
+	        - Örn: Navbar veya başlıklar için ideal.
+	-->
+	<style>
+		body {
+			height: 2000px;
+		}
+		.box {
+			width: 150px;
+			height: 150px;
+		}
+
+		#first {
+			background-color: red;
+			width: 100%;
+			position: sticky;
+			top: 0;
+		}
+		#second {
+			background-color: green;
+			position: relative;
+		}
+		#third {
+			background-color: blue;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		.mbox {
+			width: 40px;
+			height: 40px;
+			background-color: yellow;
+			/* 
+				Kapsayıcısı position relative olduğu için absolute olsa da 
+				relative davranışı sergiledi 
+			*/
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		#forth {
+			background-color: aquamarine;
+		}
+	</style>
+</head>
+
+<body>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit.
+	</p>
+
+	<div class="box" id="first">box 1</div>
+	<div class="box" id="second">
+		box 2
+		<div class="mbox">	</div>
+	</div>
+	<div class="box" id="third">box 3</div>
+
+	<div class="box" id="forth">box 4</div>
+</body>
+
+</html>

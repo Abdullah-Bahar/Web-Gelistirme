@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox Container & Aligments</title>
+
+	<!-- 
+			FLEXBOX
+
+		Flexbox (Flexible Box Layout), CSS'de esnek kutu modeli olarak geçer.
+		- Flexbox, özellikle öğeleri yatay/dikey hizalamak ve responsive tasarım yapmak için kullanılır.
+		- Flexbox, iki ana kavrama ayrılır
+			1. Flex Container	: Child elemanlarını (flex item) esnek bir düzenle yönetir.
+			2. Flex Item		: Container içindeki her bir elemandır ve esnek davranışa sahiptir.
+
+		Temel Container Özellikleri:
+		- display: flex;          -> Container'ı flexbox yapar.
+		- flex-direction: row;    -> Elemanlar yatay (row) veya dikey (column) sıralanır.
+		- flex-wrap: wrap;        -> Elemanlar container'a sığmazsa alt satıra geçer.
+		- justify-content: ...    -> Ana eksende hizalama (başlangıç, ortala, boşluk dağıt vs.)
+		- align-items: ...        -> Çapraz eksende hizalama
+		- align-content: ...      -> Çok satırlı flex container'larda satırları hizalar
+
+		Temel Item Özellikleri:
+		- align-self: ...         -> Item bazlı hizalama, align-items'i override eder
+		- order					  -> Sıralamayı düzenler
+		- flex-grow: 0;           -> Boş alanı kaplaması için büyüme
+		- flex-shrink: 1;         -> Dar alanlarda küçülme
+		- flex-basis: auto;       -> Başlangıç boyutu
+	-->
+
+	<style>
+		/* ------------------------- 
+			Genel CSS Ayarları
+		-------------------------- */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			background-color: #f2f2f2;
+			padding: 15px;
+		}
+
+		.item {
+			background-color: chocolate;
+			padding: 20px;
+			margin: 15px;
+			color: #fff;
+			font-size: 24px;
+		}
+		.i2 {
+			height: 100px;
+		}
+		.i3 {
+			height: 200px;
+		}
+		.i4 {
+			font-size: 44px;
+		}
+
+		/* ------------------------- 
+				Flexbox
+		-------------------------- */
+		.container {
+			/*
+				display: flex;
+				- Container (ebeveyn) elementin çocuklarını (flex item) esnek kutulara çevirir.
+				- Varsayılan davranış: Elemanlar yan yana dizilir (row).
+			*/
+			display: flex;
+		}
+
+		.container {
+			/*
+				flex-direction: ana eksenin yönünü belirler
+				row            -> Soldan sağa (default)
+				row-reverse    -> Sağdan sola
+				column         -> Yukarıdan aşağıya
+				column-reverse -> Aşağıdan yukarıya
+			*/
+			flex-direction: row;
+			/* 
+				flrx-direction:
+					- row ise
+						> Main axis : yatay
+						> Cross axis : dikey
+					- column ise
+						> Main axis : dikey
+						> Cross axis : yatay
+				
+				* Bu farkın tezahürü şunlarda ortaya çıkar:
+            		- Main axis: justify-content
+            		- Cross axis: align-items
+			*/
+		}
+
+		.container {
+			/*
+				flex-wrap: Elemanlar satıra sığmazsa ne olacak ?
+				nowrap       -> Tek satırda sıkıştır (default)
+				wrap         -> Sığmayan elemanlar alt satıra geçer
+				wrap-reverse -> Sığmayan elemanlar üst satıra geçer
+			*/
+			flex-wrap: wrap;
+		}
+
+		.container {
+			/*
+				justify-content: Ana eksende (main axis) hizalama
+				flex-start    -> Başa yasla (default)
+				flex-end      -> Sona yasla
+				center        -> Ortala
+				space-between -> Elemanlar arasında eşit boşluk bırakır, kenarlara yaslar
+				space-around  -> Elemanların etrafına eşit boşluk. 
+					(Sonuç olarak elemanların arasındaki boşluk, elemanların sayfa kenarlarındaki boşluğun 2 katı olur)
+					(Sayfa kenarı = 1x 	ise	  elemanlar arası = 2x)
+				space-evenly  -> Elemanlar arası + kenarlara eşit boşluk
+			*/
+			justify-content: center;
+		}
+
+		.container {
+			/*
+				align-items: Çapraz eksende (cross axis) hizalama
+				
+				stretch   	-> Yüksekliği container’a göre esner (default)
+					- Eğer iç elemanlardan birine yükseklik verilirse, aynı satırdaki diğer elemanlar da o değeri alır
+					- Eğer bazı elemanlara yükseklik verilmiş, bazılarında yoksa:
+						> Değer verilmeyenler değer verilenlerden en yüksek olanın değerini alır
+				flex-start	-> cross axis'in başına
+				flex-end  	-> cross axis'in sonuna
+				center    	-> Ortala
+				baseline  	-> Yazı taban çizgisine göre hizala. Yani itemlerın içeriğine göre hizalama olur.
+			*/
+			align-items: baseline;
+		}
+
+		.container {
+			/*
+				align-content: Birden fazla satır varsa (wrap kullanılıyorsa)
+				cross axis üzerinde satırların hizalamasını belirler.
+				flex-start, flex-end, center, space-between, space-around, space-evenly, stretch
+			*/
+			align-content: flex-start;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item">item 1</div>
+		<div class="item i2">item 2</div>
+		<div class="item i3">item 3</div>
+		<div class="item i4">item 4</div>
+		<div class="item">item 5</div>
+		<div class="item">item 6</div>
+		<div class="item">item 7</div>
+		<div class="item">item 8</div>
+		<div class="item">item 9</div>
+		<div class="item">item 10</div>
+		<div class="item">item 11</div>
+	</div>
+</body>
+
+</html>

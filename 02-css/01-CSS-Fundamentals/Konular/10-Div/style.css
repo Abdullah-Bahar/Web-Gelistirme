@@ -1,0 +1,15 @@
+#section-one {
+	color: blue;
+	background-color: aqua;
+	width: 50%; /* Genişlik kapsayıcının %50'si*/
+	height: 100px;
+
+	/* İçerik dıştaki kapsayıcan taştığı durumlar için oveflow kulanılarak bu durum yönetilir */
+	overflow: scroll;
+}
+
+#section-two {
+	color: red;
+	background-color: khaki;
+	width: 50%;
+}

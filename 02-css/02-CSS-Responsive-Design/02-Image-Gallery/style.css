@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.gallery {
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+.item-container {
+	width: 25%;
+	float: left;
+	padding: 10px;
+}
+
+.gallery-item {
+	border: 1px solid  #ccc;
+	transition: box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+	cursor: pointer;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, .6);
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 200px;
+	
+	/* Resmin boyutlarını bozmadan sığdırır. Ancak container'ı dolduramazsa resim ile
+	container arasında boşluk kalır */
+	object-fit: contain;
+	
+	/* Resmi container'a boyutlarına dikkat etmeden sığdırır */
+	object-fit: fill; /* Default */
+	
+	/* Resmin boyutlarıyla oynamadan sadece verilen boyutlar kadar 
+	kırpıp o kısmı gösterir*/
+	object-fit: none;
+	/* 'none' değerin iverdikten sonra  resmin pozisyonu ile oynayabilitiz*/
+	object-position: top; 		/* Yuakrıdan keser*/
+	object-position: 50% 50%; 	/* Tam ortadan keser*/
+
+	/* Resmin boyutlarını bozmadan kırparak, container'da kendisine ayrılan yeri kaplar */
+	object-fit: cover;
+}
+
+.description {
+	text-align: center;
+	padding: 15px;
+}
+
+/* Responsive Kod */
+@media screen and (max-width: 900px) {
+	.item-container {
+		width: 33.33333333%;
+	}
+} 
+
+@media screen and (max-width: 600px) {
+	.item-container {
+		width: 50%;
+	}
+} 
+
+@media screen and (max-width: 460px) {
+	.item-container {
+		width: 100%;
+	}
+} 

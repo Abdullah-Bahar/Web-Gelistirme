@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Box Sizing</title>
+
+	<!-- 
+		Box Sizing : 
+			* Content Box (Default Değerdir)
+				- Verilen size boyut değeri content kadar belirlenir.
+				- Margin, padding, border değerleri ise bu contetn'in üstüne eklenir.
+
+			* Border Box
+				- Verilen size boyut değeri content + padding + border kadar belirlenir
+				- Margin değeri artı olarak bunun üstüne eklenir
+	-->
+	<style>
+		.image img {
+			width: 450px;
+		}
+		#box1 {
+			box-sizing: content-box;
+			background-color: green;
+			width: 500px;
+			height: 200px;
+			margin: 10px;
+			padding: 10px;
+			border: 10px solid black;
+		}
+		#box2 {
+			box-sizing: border-box;
+			background-color: gold;
+			width: 500px;
+			height: 200px;
+			margin: 10px;
+			padding: 10px;
+			border: 10px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- ekli olan resimde content, padding, border, margin ilişkisi gösterilmiştir. -->
+	<div class="image">
+		<img src="img/box-sizing.png" alt="">
+	</div>
+
+	<div id="box1">
+		Box 1 => Content Box
+		<br><br>
+		Toplam genişlik hesabı :
+		<br>
+		= Content (400px) + Padding (2 * 10px) + Border (2 * 10px)<br>
+		= 440px toplam kutu genişliği
+	</div>
+	<div id="box2">		
+		Box 1 => Border Box
+		<br><br>
+		Content hesabı : <br>
+		Content = width - padding - border <br>
+		Content = 500 - (10*2) - (10*2) = 460
+		<br>
+		Genişlik hesabı : <br>
+		width = 500 (Sabit)
+	</div>
+
+</body>
+
+</html>
