@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tablo</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<!-- 
+	==========================
+		TABLE
+	==========================
+
+	İlgili Linkler :
+	- https://getbootstrap.com/docs/5.3/content/tables/
+	
+	Tablo:
+		- .table
+	
+	Tablo Temaları:
+		- .table-dark
+		- .table-light
+		- .table-primary
+		- .table-secondary
+		- .table-success
+		- ...
+
+	Tablo Çizgileri:
+		- .table-striped
+		- .table-striped-columns
+
+	Tablo Border:
+		- .table-bordered
+		- .table-borderless
+		- .border-{color}
+		- .border-{size}
+		- ...
+		
+	Boyut: 
+		- .table-sm
+		
+	Hover:
+		- .table-hover
+		- .table-active
+		
+	Responsive:
+		- .table-responsive
+		- .table-responsive-{breakpoint}
+			> breakpoint ->	 sm, md, lg, xl, xxl
+
+	Diğer tablo sınıfları ve konuları:
+		- Tablo Group
+		- Tablo Aligment
+		- Nested Tables (İç içe tablolar)
+		- Tablo Footer
+		- Captions (başlık)
+			> caption-top, caption-bottom
+
+	<th> scope attribute:
+		- scope="col"      	-> Sütun başlığı
+		- scope="row"      	-> Satır başlığı
+		- scope="colgroup" 	-> Birden fazla sütunu kapsayan başlık
+		- scope="rowgroup" 	-> Birden fazla satırı kapsayan başlık
+		Amaç: Erişilebilirlik (accessibility) ve semantik HTML
+-->
+
+<body class="p-5 w-75 mx-auto">
+
+	<!-- Tablo -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Dark Tema -->
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Başlık Dark Tema -->
+	<table class="table">
+		<thead class="table-dark">
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Başlık Light Tema -->
+	<table class="table">
+		<thead class="table-light">
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Çizgileri - Dark Tema -->
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Çizgileri - Normal Tema -->
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Çizgileri Sütun - Dark Tema -->
+	<table class="table table-dark table-striped-columns">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Çizgileri - Success Tema -->
+	<table class="table table-success table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Active -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td class="table-active">corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr class="table-active">
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Hover -->
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Karışık Renklendirme -->
+	<table class="table">
+		<thead>
+			<tr class="table-primary">
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="table-secondary">
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td class="table-danger">2</td>
+				<td class="bg-primary">Jozef</td>
+				<td>Çörçil</td>
+				<td class="bg-dark text-white">corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td class="bg-danger">3</td>
+				<td>Winstın</td>
+				<td class="table-success">Çörçil</td>
+				<td class="bg-info">corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td class="bg-warning">4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td class="table-warning">corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Border -->
+	<table class="table table-bordered border-primary">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Borderless -->
+	<table class="table table-borderless">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Ufak Boyut -->
+	<table class="table table-sm">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Responsive -->
+	<!-- Ekran boyutuna göre yatay kaydırma çubuğu ekler -->
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>E-mail</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>E-mail</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>E-mail</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Mustafa</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Mustafa</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Mustafa</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Jozef</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Jozef</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Jozef</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Winstın</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Winstın</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Winstın</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Şemsettin</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Şemsettin</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+					<td>Şemsettin</td>
+					<td>Çörçil</td>
+					<td>corcil@gmail.com</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo  Footer -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>footer</td>
+				<td>footer</td>
+				<td>footer</td>
+				<td>footer</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Captions -->
+	<table class="table">
+		<caption>Çörçil Aile Listesi</caption>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<!-- Tablo Captions Top -->
+	<table class="table caption-top">
+		<caption>Çörçil Aile Listesi</caption>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Tablo <th> scope : col, row -->
+	<table class="table caption-top">
+		<caption>Çörçil Aile Listesi</caption>
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Surname</th>
+				<th scope="col">E-mail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mustafa</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jozef</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Winstın</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+			<tr>
+				<th scope="row">4</th>
+				<td>Şemsettin</td>
+				<td>Çörçil</td>
+				<td>corcil@gmail.com</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<!-- Scripts Library -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+		integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
