@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Border & Sizing & Shadow</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+	<style>
+		div {
+			display: inline-block;
+		}
+
+		.d-block {
+			display: block;
+		}
+	</style>
+</head>
+
+<!-- 
+	===========================================
+		Bootstrap Border & Sizing	
+	===========================================
+
+	İlgili Linkler:
+	* https://getbootstrap.com/docs/5.3/utilities/borders/
+	* https://getbootstrap.com/docs/5.3/utilities/sizing/
+
+	1) border
+		- border
+		- border-top
+		- border-start
+		- border-bottom
+		- border-end
+
+		border removal
+			- border-0
+			- border-top-0
+			- border-start-0
+			- border-bottom-0
+			- border-end-0
+
+		border color
+			- border-primary
+			- border-primary-subtle
+			- border-secondary
+			- border-secondary-subtle
+			- border-success
+			- border-success-subtle
+			- border-danger
+			- border-danger-subtle
+			- border-warning
+			- border-warning-subtle
+			- border-info
+			- border-info-subtle
+			- border-light
+			- border-light-subtle
+			- border-dark
+			- border-dark-subtle
+			- border-white
+
+		border opacity (10, 25, 50, 75, 100)
+			- border-opacity-{value}
+
+		Border Width (0, 1, 2, 3, 4, 5)
+			- border-{value}
+
+		Border Radius (0, 1, 2, 3, 4, 5, circle, pill)
+			- rounded-{value}
+			- rounded-circle
+			- rounded-pill
+
+			- rounded-top
+			- rounded-bottom
+			- rounded-start
+			- rounded-end
+
+			- rounded-top-{value}
+			- rounded-bottom-{value}
+			- rounded-start-{value}
+			- rounded-end-{value}
+		
+	2) sizing
+		* width (w)
+			- w-25
+			- w-50
+			- w-75
+			- w-100
+			- w-auto
+
+		* height (h)
+			- h-25
+			- h-50
+			- h-75
+			- h-100
+			- h-auto
+
+		* Diğer class'lar
+			- max-width : mw-*
+			- max-height : mh-*
+			- min-width : min-w-*
+			- min-height : min-h-*
+
+	3) shadow
+		- shadow
+		- shadow-none
+		- shadow-sm
+		- shadow-lg
+	
+	-->
+
+<body class="p-5">
+
+	<div class="bg-light mt-2 p-4"></div>
+
+	<!-- border -->
+	<div class="bg-light mt-2 p-4 border"></div>
+	<div class="bg-light mt-2 p-4 border-top"></div>
+	<div class="bg-light mt-2 p-4 border-start"></div>
+	<div class="bg-light mt-2 p-4 border-bottom"></div>
+	<div class="bg-light mt-2 p-4 border-end"></div>
+
+	<br><br>
+
+	<!-- border removal -->
+	<div class="bg-light mt-2 p-4 border border-0"></div>
+	<div class="bg-light mt-2 p-4 border border-top-0"></div>
+	<div class="bg-light mt-2 p-4 border border-start-0"></div>
+	<div class="bg-light mt-2 p-4 border border-bottom-0"></div>
+	<div class="bg-light mt-2 p-4 border border-end-0"></div>
+
+	<br><br>
+
+	<!-- border color -->
+	<div class="bg-dark-subtle mt-2 p-4 border border-primary"></div>
+	<div class="bg-dark-subtle mt-2 p-4 border border-primary-subtle"></div>
+	<div class="bg-dark-subtle mt-2 p-4 border border-secondary"></div>
+	<div class="bg-dark-subtle mt-2 p-4 border border-secondary-subtle"></div>
+	<div class="bg-dark-subtle mt-2 p-4 border border-success"></div>
+	<div class="bg-dark-subtle mt-2 p-4 border border-success-subtle"></div>
+
+	<br><br>
+
+	<!-- border opacity -->
+	<div class="bg-light mt-2 p-4 border border-success border-opacity-100"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-opacity-75"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-opacity-50"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-opacity-25"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-opacity-10"></div>
+
+	<br><br>
+
+	<!-- border width -->
+	<div class="bg-light mt-2 p-4 border border-success border-0"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-1"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-2"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-3"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-4"></div>
+	<div class="bg-light mt-2 p-4 border border-success border-5"></div>
+
+	<br><br>
+
+	<!-- border radius -->
+	<div class="bg-light mt-2 p-4 border border-primary rounded"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-top"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-bottom"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-start"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-end"></div>
+
+	<br><br>
+
+	<!-- border radius size -->
+	<div class="bg-light mt-2 p-4 border border-primary rounded-0"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-1"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-2"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-3"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-4"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-5"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-circle"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-pill"></div>
+
+	<br><br>
+	
+	<!-- rounded ve cirle için kare boyutlardaki divler dışında nasıl gözükür ? -->
+	<div class="bg-light mt-2 p-4 d-block border border-primary rounded-circle"></div>
+	<div class="bg-light mt-2 p-4 d-block border border-primary rounded-pill"></div>
+
+	<br><br>
+
+	<!-- border radius size için ortaya karışık -->
+	<div class="bg-light mt-2 p-4 border border-primary rounded-bottom-1"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-start-2"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-end-circle"></div>
+	<div class="bg-light mt-2 p-4 border border-primary rounded-start-pill"></div>	
+	<div class="bg-success mt-2 p-4 rounded-5 rounded-top-o"></div>
+
+	<br><br>
+
+	<!-- sizing width -->
+	<div style="height: 300px;" class="bg-warning d-block">
+		<div class="bg-success mt-2 p-4 d-block w-25"></div>
+		<div class="bg-success mt-2 p-4 d-block w-50"></div>
+		<div class="bg-success mt-2 p-4 d-block w-75"></div>
+		<div class="bg-success mt-2 p-4 d-block w-100"></div>
+		<div class="bg-success mt-2 p-4 d-block w-auto"></div>
+	</div>
+
+	<br><br>
+
+	<!-- sizing height -->
+	<div style="height: 200px;" class="bg-warning d-block">
+		<div class="bg-primary p-4 h-25"></div>
+		<div class="bg-primary p-4 h-50"></div>
+		<div class="bg-primary p-4 h-75"></div>
+		<div class="bg-primary p-4 h-100"></div>
+		<div class="bg-primary p-4 h-auto"></div>
+	</div>
+
+	<br><br>
+
+	<!-- shadow -->
+	<div class="bg-dark-subtle mt-2 p-4 shadow"></div>
+	<div class="bg-dark-subtle mt-2 p-4 shadow-none"></div>
+	<div class="bg-dark-subtle mt-2 p-4 shadow-sm"></div>
+	<div class="bg-dark-subtle mt-2 p-4 shadow-lg"></div>
+
+
+	<!-- Scripts Library -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+		integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap Kurulumu</title>
+	<!-- 
+		Bootstap kütüphanesinin css kütüphanesi 
+	 	- Bootstrap stillerini kullanabilmek için gerekli ana CSS dosyasıdır.
+		- CDN (Content Delivery Network) üzerinden çağrılır.
+		- Dosya, tarayıcı önbelleğinde saklanabildiği için farklı sitelerde tekrar indirilmeden kullanılabilir.
+		- CDN kullanımı, projeyi hafifletir ve genellikle daha hızlı yükleme sağlar.
+		- İnternet bağlantısı yoksa çalışmaz. Offline kullanım için dosya indirilip projeye eklenebilir.
+		- En güncel CDN linkleri için: https://getbootstrap.com/
+
+		Proje kapsamında kullanılan Boostrap sürümü 
+			- 5.3.x
+		İlgili sürümle alakalı dökümantasyon linki :	
+		- https://getbootstrap.com/docs/5.3/getting-started/introduction/
+	-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<!-- 
+		İlgili dosyanın güvenliğini denetleyen bazı özellikler vardır :
+		integrity   : Dosyanın bütünlüğünü doğrulayan güvenlik kontrolüdür (dosya değiştirilmişse yüklenmez).
+		crossorigin : Farklı domainlerden gelen kaynakların nasıl kullanılacağını belirler.
+					  (örn: kimlik bilgileri veya önbellekleme davranışları)
+	-->
+</head>
+
+<body>
+	<h1>Bootsrtap Kurulumu</h1>
+
+	<!-- 
+		Popper.js:
+		- Bootstrap’ın bazı bileşenleri (tooltip, popover, dropdown vb.) konumlandırma hesaplamaları için Popper.js kütüphanesine ihtiyaç duyar.
+		- Tek başına Bootstrap JS yeterli değildir, bu yüzden önce Popper yüklenmelidir.
+	-->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<!-- 
+		Bootstap JS : 
+		- Modal, collapse, carousel, tab, tooltip gibi etkileşimli bileşenlerin çalışması için gerekli JavaScript kodlarını içerir.
+		- Popper.js ile birlikte kullanılır.
+		- Alternatif: "bootstrap.bundle.min.js" kullanılırsa Popper.js bu dosyanın içinde gömülü olarak gelir ve ayrıca eklenmesine gerek kalmaz.		
+	-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+		integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
