@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Sayfasına JS Ekleme</title>
+</head>
+
+<body>
+	<h1>Javascript'e Giriş</h1>
+
+	<!-- 
+		======================================
+			Javascript Kullanım Yöntemleri
+		======================================
+	
+		1) Inline Javascript
+			- HTML elementlerinin içine direkt olarak yazılır.
+			- Küçük ve basit etkileşimler için uygundur.
+
+		2) Internal Javascript
+			- <script> ... </script> etiketleri arasında, aynı HTML dosyasına yazılır. (İster <head> ister <body> kısmına)
+			- Sayfa yüklenmesini beklemek için genellikle <body> sonuna eklenir. (Tavsiye edilen ve mantıklı olan)
+				> Bunun nedeni: HTML yüklenmeden JS kodları çalışırsa hata olabilir.
+				> Body sonunda çağırdığımızda sayfa tamamen yüklenmiş olur.
+				
+		3) External Javascript
+			- Ayrı bir .js dosyasına yazılır ve HTML dosyasına <script src="..."> ile bağlanır.
+			- src parametresi ile .js dosyasının yolu belirtilir.
+			- Büyük projelerde ve birden fazla sayfada kullanılacak JS kodları için idealdir.
+			- Kod düzenli, okunabilir ve bakım kolaylığı sağlar.
+	-->
+
+	<!-- I. Inline JavaScript -->	
+	<button onclick="alert('Tıkladığın için teşekkürler 😊');">
+		Click Me!
+	</button>
+	<!--
+		onclick özelliği
+		- HTML elementlerine (buton, link, div vs.) kullanıcı etkileşimi eklemek için kullanılır.
+		- Burada "onclick" eventi, butona tıklandığında çalışacak olan JavaScript kodunu belirler.
+		- Aşağıdaki örnekte butona tıklandığında ekrana bir uyarı (alert) çıkacak.
+	-->
+
+
+	<!-- II. Internal JavaScript -->
+	<script>
+		// console.log(): Tarayıcı geliştirici konsoluna mesaj yazdırmak için kullanılır.
+		console.log("Sayfa tamamen yüklendi");
+	</script>
+
+	<!-- III. External JavaScript -->
+	<script src="script.js" type="text/javascript"></script>
+	<!-- type="text/javascript" modern tarayıcılarda zorunlu değil ama eski tarayıcı uyumluluğu için eklenebilir. 
+	HTML4 standardında zorunlu koşuluyordu. -->
+
+</body>
+
+</html>
