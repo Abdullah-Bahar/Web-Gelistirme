@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attributes</title>
+
+	</style>
+</head>
+
+<body>
+
+	<h1 id="title">En iyi Fotoğraflar Burda</h1>
+
+	<h3 id="sub-title">Beleş Fotolar İçin Arayın</h3>
+
+	<a href="https://cdn.pixabay.com/" target="_blank">pixabay.com</a>
+
+	<hr>
+
+	<img src="https://cdn.pixabay.com/photo/2022/10/18/06/57/cat-7529439_1280.jpg" height="300">
+
+	<img src="https://cdn.pixabay.com/photo/2022/10/18/06/57/cat-7529439_1280.jpg" height="300">
+
+	<script>
+		let a = document.querySelector('a');
+		console.log(a);
+
+		console.log(a.getAttribute("href"));
+
+		a.setAttribute('href', 'https://www.google.com');
+		console.log(a.getAttribute("href"));
+
+		let imgs = document.querySelectorAll('img');
+		console.log(imgs);
+
+		imgs.forEach(function (resim) {
+			console.log(resim.getAttribute('src'));
+			resim.setAttribute('src', 'https://cdn.pixabay.com/photo/2025/06/15/21/04/golden-retriever-puppy-amber-9661916_1280.jpg');
+		});
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TextContent & InnetHTML</title>
+
+	</style>
+</head>
+
+<body>
+
+	<h1 id="title" class="header">En iyi Fotoğraflar Burda</h1>
+
+	<h3 id="sub-title">Beleş Fotolar İçin Arayın</h3>
+
+	<p>Lorem ipsum dolor <strong>sit amet</strong> consectetur.</p>
+
+	<ul>
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+	</ul>
+
+	<script>
+		/*
+		==========================================================
+		 innerHTML vs textContent Farkı
+		==========================================================
+
+		1) textContent
+			- Bir elementin yalnızca metin içeriğini döner.
+			- HTML etiketlerini düz metin olarak gösterir (yorum satırı gibi).
+			- Kullanımı güvenlidir (XSS saldırılarına kapalıdır).
+			- Örn: ul.textContent = "<li>liste</li>"; 
+				   çıktıda <li>liste</li> sadece yazı olarak görünür.
+
+		2) innerHTML
+			- Elementin HTML içeriğini döner veya değiştirir.
+			- HTML etiketlerini çalıştırır ve DOM içine ekler.
+			- Kullanımı esnektir ama dikkatli olunmalı (XSS açıklarına sebep olabilir).
+			- Örn: ul.innerHTML = "<li>liste 1</li>"; 
+				   çıktıda gerçek <li> elementi oluşur.
+
+		Özet:
+		- textContent 	-> sadece düz metin.
+		- innerHTML 	-> HTML etiketlerini işler ve DOM’a uygular.
+		==========================================================
+	*/
+		let p = document.getElementsByTagName("p")[0];
+
+		p.textContent = "Naber Kanka";
+		console.log(p);
+		console.log(p.textContent);
+
+		let ul = document.querySelector("ul");
+
+		console.log(ul);
+		console.log(ul.textContent);
+
+		ul.textContent = "<li>liste</li>";
+		console.log(ul);
+		console.log(ul.textContent);
+
+		ul.innerHTML = "<li>liste 1</li>" +
+			"<li>liste 2</li>" +
+			"<li>liste 3</li>";
+
+		console.log(ul);
+		console.log(ul.textContent);
+		console.log(ul.innerHTML);
+	
+
+		console.log(document.body.textContent);
+
+	</script>
+</body>
+
+</html>
