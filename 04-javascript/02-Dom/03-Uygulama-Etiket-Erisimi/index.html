@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uygulama: Eitket Erişimi</title>
+</head>
+
+<body>
+
+	<h1 id="header">ToDo List Uygulaması</h1>
+
+	<!-- ul#todoList>li#item_$.todoitem*10>input:checkbox>{1$.00 : lorem$} -->
+
+	<ul id="todoList">
+		<li id="item_1" class="todoitem">
+			<input type="checkbox">10.00 : lorem1
+		</li>
+
+		<li id="item_2" class="todoitem">
+			<input type="checkbox">11.00 : lorem2
+		</li>
+
+		<li id="item_3" class="todoitem">
+			<input type="checkbox">12.00 : lorem3
+		</li>
+
+		<li id="item_4" class="todoitem">
+			<input type="checkbox">13.00 : lorem4
+		</li>
+
+		<li id="item_5" class="todoitem">
+			<input type="checkbox">14.00 : lorem5
+		</li>
+
+		<li id="item_6" class="todoitem">
+			<input type="checkbox">15.00 : lorem6
+		</li>
+
+		<li id="item_7" class="todoitem">
+			<input type="checkbox">16.00 : lorem7
+		</li>
+
+		<li id="item_8" class="todoitem">
+			<input type="checkbox">17.00 : lorem8
+		</li>
+
+		<li id="item_9" class="todoitem">
+			<input type="checkbox">18.00 : lorem9
+		</li>
+
+		<li id="item_10" class="todoitem">
+			<input type="checkbox">19.00 : lorem10
+		</li>
+	</ul>
+
+	<script>
+		/*
+			Yapılacaklar :
+
+			1) id'si todolist olan etiketi seçip liste işaretini görünmez yapacağız
+
+			2) Tüm liste elemanalrının üstünü çizeceğiz
+
+			3) Kullanıcının saatine göre gerekli aşamaları işaretleyeceğiz.
+		*/
+
+		//-------------------------------------------
+
+		// document.getElementById("todoList").style.listStyleType = "none";
+
+		// let todolist = document.getElementById("todolist");
+		// todolist.style.listStyleType  = "none";
+
+		//-------------------------------------------
+
+		// let liste = document.getElementsByTagName("ul");
+		// liste[0].style.listStyleType = "none";
+
+		//-------------------------------------------
+
+		// document.querySelector("#todoList").style.listStyleType = "none";
+
+		//-------------------------------------------
+
+		let listeElemanlari = document.querySelectorAll("li");
+		
+		// for (let i = 0; i < listeElemanlari.length; i++) {
+		// 	listeElemanlari[i].style.listStyleType = "none";
+		// }
+
+		listeElemanlari.forEach(function (eleman) {
+			eleman.style.listStyleType = "none";
+		});
+
+		//-------------------------------------------
+
+		// let ustunuCizme = document.querySelectorAll("li");
+
+		// ustunuCizme.forEach(function (eleman) {
+		// 	eleman.style.textDecoration = "line-through";
+		// });
+
+		//-------------------------------------------
+
+		let yapilacaklar = document.querySelectorAll("li");
+		let date = new Date();
+		let hour = date.getHours();
+		let listHour;
+
+		// console.log(date);
+		// console.log(date.getDate());
+		// console.log(date.getHours());
+		// console.log(date.getMilliseconds());
+
+		let i = 0;
+		while (i < yapilacaklar.length) {
+			// todolist'teki elemanların saatlerini alıyoruz
+			listHour = parseInt(yapilacaklar[i].innerText);
+
+			if (listHour <= hour) {
+				yapilacaklar[i].style.textDecoration = "line-through";
+				yapilacaklar[i].querySelector("input[type='checkbox']").checked = true;
+			} else {
+				break;
+			}
+			
+			console.log("Yapılacaklar listesindeki " + i + ". eleman saati : " + listHour);
+			i++;
+		}
+
+	</script>
+</body>
+
+</html>

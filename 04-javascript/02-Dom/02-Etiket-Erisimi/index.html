@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eitket Erişimi</title>
+
+	<style>
+		.kutu {
+			width: 120px;
+			height: 120px;
+			margin: 10px;
+			float: left;
+		}
+
+		#mavi {
+			background-color: blue;
+		}
+
+		#kirmizi {
+			background-color: red;
+		}
+
+		#sari {
+			background-color: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="kutu" id="mavi"></div>
+	<div class="kutu" id="kirmizi"></div>
+	<div class="kutu" id="sari"></div>
+
+	<script>
+		// 1) ID ile seçim -> sadece 1 öğe döner (tekil)
+		let sonuc1 = document.getElementById("mavi");
+		console.log(sonuc1);
+		
+		// 2) Etiket (tag) ile seçim -> tüm <div>’leri döner 
+		// HTMLCollection değeri döndürür
+		let sonuc2 = document.getElementsByTagName("div");
+		console.log(sonuc2);
+		
+		// 3) Class ile seçim -> class="kutu" olan tüm öğeleri döner
+		// HTMLCollection değeri döndürür
+		let sonuc3 = document.getElementsByClassName("kutu");
+		console.log(sonuc3);
+		
+		// 4) querySelector -> CSS seçici ile ilk öğeyi döner (Id döndürdü)
+		let sonuc4 = document.querySelector("#kirmizi");
+		console.log(sonuc4);
+		
+		// 5) querySelector -> CSS seçici ile ilk öğeyi döner (Class döndürdü)
+		let sonuc5 = document.querySelector(".kutu");
+		console.log(sonuc5);
+		
+		// 6) querySelectorAll -> CSS seçici ile tüm öğeleri döner 
+		// NodeList değeri döndürür.
+		let sonuc6 = document.querySelectorAll(".kutu");
+		console.log(sonuc6);
+
+		/*
+		-----------------------
+			Örnek
+		-----------------------
+		*/ 
+		var isBlue = false;
+		var width = 50;
+		var blue = document.getElementById("mavi");
+
+		setInterval(function() {
+    		/*
+    		    * blue.style.width
+    		        - Inline style üzerinden gelir, CSS değerini görmez
+    		    * blue.offsetWidth
+    		        - CSS dahil gerçek genişliği döner
+    		*/
+			var currentWidth = parseInt(blue.style.width); // Bunla çalışmaz
+			var currentOffsetWidth = parseInt(blue.offsetWidth);
+
+			if (isBlue) {
+				blue.style.background = "green";
+				blue.style.width = (currentOffsetWidth + width) + "px"; 
+			} else {
+				blue.style.background = "blue";
+				blue.style.width = (currentOffsetWidth - width) + "px"; 
+			}
+			isBlue = !isBlue;
+
+		}, 1000);
+
+	</script>
+</body>
+
+</html>

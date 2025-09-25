@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inline & Class CSS</title>
+
+	<style>
+		.header {
+			color: red;
+			border: 1px solid goldenrod;
+			padding: 10px;
+		}
+
+		.f40 {
+			font-size: 40px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- CSS class'ı üzerinden style değeri verildi -->
+	<h1 id="title" class="header f40">En iyi Fotoğraflar Burda</h1>
+
+	<!-- Inline olarak style değeri verildi -->
+	<h3 id="sub-title" style="color: goldenrod; border: 1px solid black;">Beleş Fotolar İçin Arayın</h3>
+
+	<script>
+		/*
+			==============================================================================
+				JS ile Style Yönetimi Açısından Inline CSS & Class CSS Arasındaki Fark
+			==============================================================================
+
+			* "element.style.property" ile stil değerlerine erişmek :
+				- Inline olan CSS değerlerini olur.
+				- Inline olarak CSS değeri atar.
+
+				1. Inline CSS için
+					> Style değerlerine erişilebilir.
+			
+				2. Class CSS için
+					> Style değerlerine erişilemez.
+
+			* "getComputedStyle(element).property" ile stil değerlerine erişmek :
+				- Tarayıcı tarafından hesaplanan gerçek stil değerini döner.
+				- Hem inline hem class CSS değerlerini gösterir.
+				- Değer ataması için kullanılmaz, sadece okuma amaçlıdır.
+
+				1. Inline CSS için
+					> Style değerlerine erişilebilir.
+			
+				2. Class CSS için
+					> Style değerlerine erişilebilir.
+		*/
+
+		var title = document.getElementById("title");			// Class ile CSS değeri almış
+		var subTitle = document.getElementById("sub-title");	// Inline olarak CSS değeri almış
+
+		/*
+			element.style.property kullanimi
+		*/
+		console.log(title.style.border);
+		console.log(title.style.color);
+
+		console.log(subTitle.style.border);
+		console.log(subTitle.style.color);
+
+		title.style.color = "green";
+		console.log(title.style.color);
+
+		/*
+			getComputedStyle(element).property kullanimi
+		*/
+		console.log(getComputedStyle(title).border);
+		console.log(getComputedStyle(title).color);
+
+		console.log(getComputedStyle(subTitle).border);
+		console.log(getComputedStyle(subTitle).color);
+
+		title.off
+	</script>
+</body>
+
+</html>

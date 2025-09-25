@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Style Güncelleme</title>
+
+	<style>
+		.header {
+			color: red;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		
+		.f40 {
+			font-size: 40px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1 id="title">En iyi Fotoğraflar Burda</h1>
+
+	<h3 id="sub-title">Beleş Fotolar İçin Arayın</h3>
+
+	<img src="https://cdn.pixabay.com/photo/2022/10/18/06/57/cat-7529439_1280.jpg" width="500">
+
+	<script>
+		var title = document.getElementById("title");
+		console.log(title);
+
+		/*
+		title.style.color = "red";
+		title.style.fontSize = "40px";
+		title.style.border = "1px solid black"
+		title.style.padding = "10px";
+		*/
+
+		// ilgili elementin class listesini alma
+		console.log(title.classList);
+		console.log(title.className);
+		
+		// ilgili elementin class ekleme
+		title.classList.add("header");
+		title.classList.add("f45");
+		
+		console.log(title.classList);
+		console.log(title.className);
+		
+		// İlgili elementten class çıkarma
+		title.classList.remove("f45");
+		console.log(title.classList);
+		console.log(title.className);
+
+		/*
+			* classList.toggle("class");
+				- Eğer "class" ekliyse çıkarı
+				- Eğer "class" ekli değilse ekler
+		*/
+		title.classList.toggle("f40");
+		title.classList.toggle("f40");
+
+	</script>
+</body>
+
+</html>
