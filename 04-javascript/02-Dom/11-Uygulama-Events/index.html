@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uygulama: Events</title>
+
+	<style>
+		.kutu {
+			width: 120px;
+			height: 120px;
+			margin: 10px;
+			float: left;
+		}
+
+		#mavi {
+			background-color: blue;
+		}
+
+		#kirmizi {
+			background-color: red;
+		}
+
+		#sari {
+			background-color: yellow;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="kutu" id="mavi"></div>
+	<div class="kutu" id="kirmizi"></div>
+	<div class="kutu" id="sari"></div>
+
+	<script>
+		let kutular = document.querySelectorAll(".kutu");
+
+		for (let i = 0; i < kutular.length; i++) {
+			kutular[i].addEventListener('click', function () {
+				kutular[i].style.display = "none";
+				// this.style.display = "none";
+			});
+		}
+	</script>
+</body>
+
+</html>
